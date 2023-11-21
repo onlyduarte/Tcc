@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Image, Button } from "react-native";
-import ButtonC from "../componentes/ButtonC";
 import { useState } from "react";
 
 const Login = ({ navigation }) => {
@@ -27,7 +26,7 @@ const Login = ({ navigation }) => {
         </View>
         <View style={style.containerInput}>
           <Text style={style.text}>Senha</Text>
-          <TextInput style={style.input} onChangeText={setSenha} />
+          <TextInput secureTextEntry={true} style={style.input} onChangeText={setSenha} />
         </View>
         <Button title="Acessar" onPress={entrar} color="#421801" />
         {/* <ButtonC title='Acessar' bgcolor='#421801' onPress={entrar}/> */}

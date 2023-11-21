@@ -3,13 +3,15 @@ import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { CheckBox } from "@rneui/base";
 
-const Filtro = () => {
+const Filtro = ({  }) => {
+
   const [checked, setChecked] = React.useState(true);
   const toggleCheckbox = () => setChecked(!checked);
+
   return (
-    <View>
+    <View style={style.body}>
       <View style={style.container}>
-        <Ionicons name="return-up-back" size={30} marginLeft={10} />
+        <Ionicons name="return-up-back" size={30} marginLeft={10} onPress={voltar}/>
         <View style={style.filter}>
           <CheckBox
             containerStyle={{ backgroundColor: "transparent", width: "0%" }}
@@ -28,13 +30,14 @@ const Filtro = () => {
           <Text style={style.text}>Filtro</Text>
         </View>
       </View>
-        <Text style={[style.text, {marginLeft: 10}]}>17 Profissionais próximos {"\n"} numa área de 20 km</Text>
+        <Text style={[style.text, {marginLeft: 10, marginBottom: 15}]}>17 Profissionais próximos {"\n"} numa área de 20 km</Text>
     </View>
   );
 };
 const style = StyleSheet.create({
-  body: {
-
+  body2: {
+    borderBottomWidth: 10,
+    borderBottomColor: '#421801',
   },
   container: {
     flexDirection: "row",

@@ -32,7 +32,7 @@ const Home = () => {
       height: 150,
      }}
        />
-      <Card1 conteudo={{title:"Barbearia", 
+      <Card1 conteudo={{title:"Salão de beleza", 
       img:`${require('../images/Salao.jpg')}`, 
       width: 150, 
       height: 150,
