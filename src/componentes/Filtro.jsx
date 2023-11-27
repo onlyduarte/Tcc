@@ -37,7 +37,7 @@ const Filtro = ({  }) => {
 const style = StyleSheet.create({
   body2: {
     borderBottomWidth: 10,
-    borderBottomColor: '#421801',
+    borderBottomColor: '#EBB512',
   },
   container: {
     flexDirection: "row",

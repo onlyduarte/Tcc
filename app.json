@@ -9,7 +9,7 @@
     "splash": {
       "image": "src/images/logoTCC.png",
       "resizeMode": "contain",
-      "backgroundColor": "#02854F"
+      "backgroundColor": "#06121E"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,7 +19,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "src/images/logoTCC.png",
         "backgroundColor": "#ffffff"
       }
     },

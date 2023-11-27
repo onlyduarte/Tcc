@@ -12,12 +12,12 @@ import Navbar from "../componentes/Navbar";
 
 const Home = () => {
   return (
-    <SafeAreaView style={style.body}>
+    <SafeAreaView>
       <Navbar />
     <View style={style.container}>
       <Image
         source={require("../images/logoTCC.png")}
-        style={{ width: 200, height: 170, marginBottom: -10 }}
+        style={{ width: 200, height: 170 }}
         />
       <View style={style.texto}>
         <Text style={style.text}>Seja bem vindo, usuário!</Text>
@@ -52,12 +52,13 @@ const style = StyleSheet.create({
     height: "100%",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#02854F",
-    gap: 10,
+    backgroundColor: "#06121E",
+    gap: 5,
   },
   text: {
     color: "#f9f9f9",
     fontWeight: "600",
+    fontSize: 15
   },
   texto: {
     marginBottom: 20,

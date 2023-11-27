@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, TextInput, Image, Button } from "react-native";
 import { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState(null);
@@ -14,7 +15,7 @@ const Login = ({ navigation }) => {
     }
   };
   return (
-    <View style={style.body}>
+    <SafeAreaView style={style.body}>
       <Image
         source={require("../images/logoTCC.png")}
         style={{ width: 200, height: 170, marginBottom: -10 }}
@@ -28,20 +29,20 @@ const Login = ({ navigation }) => {
           <Text style={style.text}>Senha</Text>
           <TextInput secureTextEntry={true} style={style.input} onChangeText={setSenha} />
         </View>
-        <Button title="Acessar" onPress={entrar} color="#421801" />
+        <Button title="Acessar" onPress={entrar} color="#EBB512" />
         {/* <ButtonC title='Acessar' bgcolor='#421801' onPress={entrar}/> */}
       </View>
       <View style={style.footer}>
         <Text style={style.text}>Não tenho uma conta</Text>
         <Text style={style.text}>Esqueci a senha</Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const style = StyleSheet.create({
   body: {
-    backgroundColor: "#02854F",
+    backgroundColor: "#06121E",
     justifyContent: "center",
     alignItems: "center",
     height: "100%",

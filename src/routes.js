@@ -7,6 +7,8 @@ import Cardapio from "./pages/Cardapio";
 import TypeAccount from "./pages/TypeAccount";
 import RegisterColab from "./pages/RegisterColab";
 import RegisterCliente from "./pages/RegisterCliente";
+import Reservation from "./pages/Reservation";
+import Perfil from "./pages/Perfil";
 
 const Tab = createBottomTabNavigator();
 
@@ -94,6 +96,29 @@ const Routes = () => {
         tabBarIcon: null
       }}
       />
+      <Tab.Screen
+      name="Reservation"
+      component={Reservation}
+      options={{
+        headerShown: false,
+        tabBarIcon: ({ color, size, focused }) => {
+          if(focused){
+            return <Ionicons name="today" color={color} size={size}/>
+          }
+          return <Ionicons name="today-outline" color={color} size={size}/>
+        }
+      }}
+      />
+      <Tab.Screen name="Perfil"
+      component={Perfil}
+      options={{headerShown: false,
+      tabBarIcon: ({color, size, focused}) => {
+        if (focused) {
+          return <Ionicons name="person" color={color} size={size}/>
+        }
+        return <Ionicons name="person-outline" color={color} size={size}/>
+      }
+      }}/>
     </Tab.Navigator>
   );
 };

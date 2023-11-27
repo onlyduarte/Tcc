@@ -21,7 +21,7 @@ const RegisterCliente = ({ navigation }) => {
       </View>
       <View style={styles.containerInput}>
         <TextInput placeholder="CPF" style={styles.inputMini} />
-        {/* <TextInput placeholder='Gênero' style={styles.inputMini}/> */}
+        <TextInput placeholder='Gênero' style={styles.inputMini}/>
       </View>
       <TextInput
         placeholder="E-mail"
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: "#F1F5F4",
-    width: 335,
+    width: 330,
     height: 45,
     borderRadius: 8,
     paddingHorizontal: 5,

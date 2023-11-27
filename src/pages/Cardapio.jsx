@@ -45,6 +45,9 @@ const Cardapio = ({ navigation }) => {
         <Text style={[style.text, {marginLeft: 10, marginBottom: 15}]}>17 Profissionais próximos {"\n"} numa área de 20 km</Text>
     </View>
           <CardCliente star={2} avaliacao={20} />
+          <CardCliente star={5}/>
+          <CardCliente />
+          <CardCliente />
           <CardCliente />
           <CardCliente />
           <CardCliente />
@@ -59,11 +62,11 @@ const style = StyleSheet.create({
   body: {
     width: "100%",
     height: "100%",
-    backgroundColor: "#02854F",
+    backgroundColor: "#06121E",
   },
   body2: {
     borderBottomWidth: 10,
-    borderBottomColor: '#421801',
+    borderBottomColor: '#EBB512',
   },
   container: {
     flexDirection: "row",

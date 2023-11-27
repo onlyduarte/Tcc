@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
+import Stars from "./Stars";
 
 const CardCliente = (props) => {
   return (
@@ -22,12 +23,7 @@ const CardCliente = (props) => {
           </Text>
         </View>
         <View style={{ top: 15, gap: 2 }}>
-          <View style={styles.star}>
-          {
-          Array(props.star).fill().map((_, index) => ( 
-        <Ionicons name="star" size={15} />
-  ))}
-          </View>
+        <Stars star={props.star}/>
           <Text>Avaliações: {props.avaliacao}</Text>
         </View>
       </View>
