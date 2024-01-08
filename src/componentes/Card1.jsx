@@ -1,30 +1,31 @@
 import React from 'react';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import { Image, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Card1 = ({conteudo}) => {
-    return (  
-        <View style={[style.body, {width: conteudo.cardWidth? conteudo.cardWidth : 150, height: conteudo.cardHeight? conteudo.cardHeight : 150}]}>
-            <Text style={style.text}>
-                {conteudo.title}
-            </Text>
-                <Image source={`${conteudo.img}`} style={{width: conteudo.width? conteudo.width: 150, height: conteudo.height? conteudo.height: 150, borderRadius: conteudo.borderRadius}}/>
-        </View>
-
-    );
-}
-
+const Card1 = ({ conteudo }) => {
+  const { cardWidth, cardHeight, onePress, title, img, width, height, borderRadius } = conteudo;
+  
+  return (
+    <TouchableOpacity
+      style={[
+        style.body,
+        { width: cardWidth ? cardWidth : 150, height: cardHeight ? cardHeight : 150, borderRadius },
+      ]}
+    >
+      <Text style={style.text}>{title}</Text>
+      <Image source={img} style={{ width: width ? width : 150, height: height ? height : 150, borderRadius }} />
+    </TouchableOpacity>
+  );
+};
 
 const style = StyleSheet.create({
-    body:{
-        alignItems: 'center',
-        gap: 5,
-    },
-    text:{
-        color: '#f5f5f5',
-        fontSize: 20,
-    }
-})
-    
-
+  body: {
+    alignItems: 'center',
+    gap: 5,
+  },
+  text: {
+    color: '#f5f5f5',
+    fontSize: 20,
+  },
+});
 
 export default Card1;

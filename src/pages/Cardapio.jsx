@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, View, ScrollView, Text } from "react-native";
+import { SafeAreaView, StyleSheet, View, ScrollView, Text, Modal } from "react-native";
 import Navbar from "../componentes/Navbar";
 import Search from "../componentes/Search";
 import Filtro from "../componentes/Filtro";
@@ -12,18 +12,14 @@ import { CheckBox } from "@rneui/base";
 const Cardapio = ({ navigation }) => {
   const [checked, setChecked] = React.useState(true);
   const toggleCheckbox = () => setChecked(!checked);
-  const voltar = () => {
-    navigation.navigate("Home");
-};
+
   return (
-    <SafeAreaView>
-      <Navbar />
       <View style={style.body}>
+      <Navbar />
         <ScrollView>
           <Search />
           <View style={style.body2}>
       <View style={style.container}>
-        <Ionicons name="return-up-back" size={30} marginLeft={10} onPress={voltar}/>
         <View style={style.filter}>
           <CheckBox
             containerStyle={{ backgroundColor: "transparent", width: "0%" }}
@@ -38,7 +34,7 @@ const Cardapio = ({ navigation }) => {
           <Text style={style.text}>Online</Text>
         </View>
         <View style={style.filter}>
-          <Ionicons name="filter" size={30} />
+          <Ionicons name="filter" size={30} color={`white`} />
           <Text style={style.text}>Filtro</Text>
         </View>
       </View>
@@ -54,7 +50,6 @@ const Cardapio = ({ navigation }) => {
           <CardCliente />
         </ScrollView>
       </View>
-    </SafeAreaView>
   );
 };
 
@@ -63,6 +58,7 @@ const style = StyleSheet.create({
     width: "100%",
     height: "100%",
     backgroundColor: "#06121E",
+    paddingTop: 10,
   },
   body2: {
     borderBottomWidth: 10,

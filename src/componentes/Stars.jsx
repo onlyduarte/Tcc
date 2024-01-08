@@ -9,7 +9,7 @@ const Stars = (props) => {
         {Array(props.star)
           .fill()
           .map((_, index) => (
-            <Ionicons name="star" size={15} color={'white'}/>
+            <Ionicons name="star" size={15} color={'yellow'}/>
           ))}
       </View>
     </View>

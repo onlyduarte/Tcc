@@ -25,7 +25,6 @@ const RegisterCliente = ({ navigation }) => {
       </View>
       <TextInput
         placeholder="E-mail"
-        secureTextEntry={true}
         style={styles.input}
       />
       <TextInput
@@ -33,7 +32,10 @@ const RegisterCliente = ({ navigation }) => {
         secureTextEntry={true}
         style={styles.input}
       />
-      <TextInput placeholder="Confirmar Senha" style={styles.input} />
+      <TextInput 
+      placeholder="Confirmar Senha" 
+      secureTextEntry={true}
+      style={styles.input} />
       <Button
         title={"Cadastrar"}
         buttonStyle={{

@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Image, Button } from "react-native";
+import { View, Text, StyleSheet, TextInput, Image} from "react-native";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Button } from "@rneui/base";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState(null);
@@ -9,11 +10,14 @@ const Login = ({ navigation }) => {
 
   const entrar = () => {
     if (email == "teste" && senha == 1234) {
-      navigation.navigate("Home");
+      navigation.navigate("TabBar");
     } else {
       alert("Login ou senha incorretos");
     }
   };
+  const register = () => {
+    navigation.navigate("TypeAccount")
+  }
   return (
     <SafeAreaView style={style.body}>
       <Image
@@ -29,11 +33,11 @@ const Login = ({ navigation }) => {
           <Text style={style.text}>Senha</Text>
           <TextInput secureTextEntry={true} style={style.input} onChangeText={setSenha} />
         </View>
-        <Button title="Acessar" onPress={entrar} color="#EBB512" />
+        <Button Button title="Acessar" onPress={entrar} color="#EBB512" buttonStyle={{width: 150, height: 40}}/>
         {/* <ButtonC title='Acessar' bgcolor='#421801' onPress={entrar}/> */}
       </View>
       <View style={style.footer}>
-        <Text style={style.text}>Não tenho uma conta</Text>
+        <Text style={style.text} onPress={register}>Não tenho uma conta</Text>
         <Text style={style.text}>Esqueci a senha</Text>
       </View>
     </SafeAreaView>

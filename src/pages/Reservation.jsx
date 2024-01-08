@@ -7,16 +7,16 @@ import Navbar from '../componentes/Navbar'
 
 const Reservation = () => {
   return (
-    <View>
+    <View style={styles.body}>
       <Navbar/>
     <ScrollView>
-    <SafeAreaView style={styles.body}>
-    <Text style={{fontSize: 25, color: 'white', alignSelf: 'center', marginBottom: 10, borderBottomColor: 'white', borderBottomWidth: 1}}>Minhas Reservas</Text>
+      <View style={styles.vish}>
+    <Text style={{fontSize: 25, color: 'white', alignSelf: 'center', marginBottom: 10, marginTop: 30, borderBottomColor: 'white', borderBottomWidth: 1,}}>Minhas Reservas</Text>
       <Reserve/>
       <Reserve/>
       <Reserve/>
       <Reserve/>
-    </SafeAreaView>
+      </View>
     </ScrollView>
     </View>   
   )
@@ -29,6 +29,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: '100%',
-        backgroundColor: '#06121E'
+        backgroundColor: '#06121E',
+        paddingTop: 10,
+    },
+    vish:{
+      alignItems: 'center'
     }
 })

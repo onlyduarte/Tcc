@@ -5,21 +5,25 @@ import Avaliacao from '../componentes/Avaliacao'
 import { Button } from '@rneui/base'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Perfil = () => {
+const Perfil = ({ navigation }) => {
+  const deslogar = () => {
+    navigation.navigate("Login");
+  }
   return (
     <SafeAreaView style={styles.body}>
       <Info title={'Nome:'} nome={'João Dener'}/>
       <Info title={'E-mail:'} nome={'joaozinho123@hotmail.com'}/>
       <Info title={'Cep:'} nome={'4002-8922'}/>
       <Avaliacao title={'Avaliação como cliente:'} nome={'João Dener'} star={2}/>
-      <Button  title={'Sair'}
+      <Button title={'Sair'}
       buttonStyle={{
         width: 250,
-        height: 40,
+        height: 50,
         backgroundColor: '#EBB512',
         alignSelf: 'center',
-        top: 10
-      }}/>
+        marginTop: 10,
+      }}
+      onPress={deslogar}/>  
     </SafeAreaView>
   )
 }

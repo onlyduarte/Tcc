@@ -3,9 +3,9 @@ import { Button } from '@rneui/base'
 import React from 'react'
 
 const RegisterColab = ({ navigation }) => {
-  const cadastrar = () => {
-    alert("Agora vamos montar seu perfil");
-    navigation.navigate("RegisterColab2");
+  const finalizarCadastro = () => {
+    alert("Cadastrado com sucesso");
+    navigation.navigate("Login");
   };
   return (
     <View style={styles.body}>
@@ -13,40 +13,35 @@ const RegisterColab = ({ navigation }) => {
         source={require("../images/logoTCC.png")}
         style={{ width: 180, height: 180, marginTop: 20 }}
       />
-      <View style={styles.containerInput}>
-        <TextInput placeholder="Nome" style={styles.inputMini} />
-        <TextInput placeholder="Nome da empresa" style={styles.inputMini} />
-      </View>
-      <View style={styles.containerInput}>
-        <TextInput placeholder="CPF/CNPJ" style={styles.inputMini} />
-        <TextInput placeholder='CEP' style={styles.inputMini}/>
-      </View>
       <TextInput
-        placeholder="Tipo de estabelecimento"
+        placeholder="Tempo de experiência"
         secureTextEntry={true}
         style={styles.input}
       />
       <TextInput
-        placeholder="E-mail"
+        placeholder="Certificados"
         style={styles.input}
       />
       <TextInput
-        placeholder="Senha"
-        secureTextEntry={true}
+        placeholder="Tipos de serviços"
         style={styles.input}
       />
-      <TextInput 
-      placeholder="Confirmar Senha" 
-      secureTextEntry={true}
-      style={styles.input} />
+      <TextInput
+        placeholder="Contatos"
+        style={styles.input}
+      />
+      {/* <TextInput
+        placeholder="Selecione uma foto para o perfil"
+        style={styles.input}
+      /> */}
       <Button
-        title={"Cadastrar"}
+        title={"Finalizar cadastro"}
         buttonStyle={{
           width: 250,
           height: 40,
           backgroundColor: "#EBB512",
         }}
-        onPress={cadastrar}
+        onPress={finalizarCadastro}
       />
     </View>
   )

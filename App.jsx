@@ -5,7 +5,8 @@ import Home from "./src/pages/Home";
 
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
-import Routes from "./src/routes";
+import Routes from "./src/Routes/routes";
+import StackRoutes from "./src/Routes/stack.routes";
 
 const Stack = createStackNavigator();
 
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <NavigationContainer>
       {/* <MyStack /> */}
-      <Routes />
+      <StackRoutes />
     </NavigationContainer>
   );
 };
@@ -32,7 +33,7 @@ const style = StyleSheet.create({
   body: {
     width: "100%",
     height: "100%",
-    backgroundColor: '#02854F',
+    backgroundColor: "#02854F",
   },
 });
 
