@@ -38,16 +38,16 @@ const Cardapio = ({ navigation }) => {
           <Text style={style.text}>Filtro</Text>
         </View>
       </View>
-        <Text style={[style.text, {marginLeft: 10, marginBottom: 15}]}>17 Profissionais próximos {"\n"} numa área de 20 km</Text>
+        <Text style={[style.text, {marginLeft: 10, marginBottom: 15}]}>8 Profissionais próximos numa área de 20 km</Text>
     </View>
           <CardCliente star={2} avaliacao={20} />
           <CardCliente star={5}/>
-          <CardCliente />
-          <CardCliente />
-          <CardCliente />
-          <CardCliente />
-          <CardCliente />
-          <CardCliente />
+          <CardCliente star={3}/>
+          <CardCliente star={1}/>
+          <CardCliente star={4}/>
+          <CardCliente star={3}/>
+          <CardCliente star={4}/>
+          <CardCliente star={5}/>
         </ScrollView>
       </View>
   );

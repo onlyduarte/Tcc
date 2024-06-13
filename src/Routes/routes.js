@@ -42,7 +42,7 @@ const Routes = () => {
           },
         }}
       /> */}
-      {/* <Tab.Screen
+      <Tab.Screen
         name="Inicio"
         component={Home}
         options={{
@@ -54,7 +54,7 @@ const Routes = () => {
             return <Ionicons name="home-outline" color={color} size={size} />;
           },
         }}
-      /> */}
+      />
       <Tab.Screen
         name="Profissionais"
         component={Cardapio}
